@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regitration</title>
+
+    <style>
+        * {
+            margin-top: 0;
+            box-sizing: border-box;
+        }
+    .top-main{
+        background-color: #ececb8;
+            font-family: Helvetica;
+            padding: 10px;
+            border: 1px solid black;
+            box-shadow: 0 14px 28px rgba(65, 84, 11, 0.25), 0 10px 10px rgba(35, 40, 20, 0.22);
+            text-align: center;
+    }
+
+        input[type=text],
+        input[type=email],
+        input[type=date],
+        input[type=password],
+        input[type=gender],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 10px 3px;
+            border: none;
+            border-bottom: 1px solid tomato;
+        }
+
+        .headingstyle {
+            text-align: center;
+        }
+
+        input[type=submit] {
+            padding: 12px 15px;
+            margin: 10px 3px;
+            font-size: 1.5em;
+        }
+
+        input[type=submit]:hover {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+
+        input[type=text]:focus,
+        input[type=email]:focus,
+        input[type=date]:focus,
+        input[type=password]:focus,
+        input[type=gender]:focus,
+        textarea:focus,
+        select:focus {
+            background: lightblue;
+        }
+
+        .main {
+            background-color: #90acd3;
+            font-family: Helvetica;
+            padding: 10px;
+            border: 1px solid black;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+
+        input[type=submit] {
+            color: white;
+            cursor: pointer;
+            max-width: 140px;
+            background: black;
+            margin: 0 0 5px;
+            padding: 10px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top-main">
+        <div class="top1">
+            <h1>WELCOME DEAR</h1>
+        </div>
+        <div class="top2">
+            <h3>Hurry up ! Start filling this form</h3>
+        </div>
+        <div class="abt">
+            <p>This is totaly in our ovservation. You can share your data without a second
+                thought. Thanks for comming up and we assure you that we definitely contact with 
+                you. We respect your privacy and we hope you will also give those data in the form 
+                correctly.
+            </p>
+        </div>
+    </header>
+    <section class="main">
+        <h2 id="heading2">REGISTRATION FORM</h2>
+        <form action="app.js">
+            <fieldset>
+                <legend>Form-fillup</legend>
+                <h2 class="headingstyle">Contact Form</h2>
+                <label for="testnameval">Name</label>
+                <input type="text" id="testnameval" name="name"><br><br>
+                <label for="mailid">Email</label>
+                <input type="email" id="mailid" name="mailid">
+                <br><br>
+                <label for="mailid">Joining Date</label>
+                <input type="date" name="jday"><br><br>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <br><br>
+                <label for="description">Why you join with me ?</label>
+                <textarea id="description" name="description" rows="4" cols="5"></textarea>
+                <br><br>
+                <label for="re-pass">Confirm Password</label>
+                <input type="password" id="re-pass" name="password">
+                <br><br>
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender">
+                    <option value="male">MALE</option>
+                    <option value="female">FEMALE</option>
+                    <option value="transgender">TRANS-GENDER</option>
+                </select><br>
+                <input id="submit" type="submit" value="Submit">
+            </fieldset>
+        </form>
+
+    </section>
+</body>
+<script src="/src/app.js"></script>
+<script>
+    document.getElementById("submit").onclick = function(){myfunction()};
+function myfunction(){
+    document.getElementById("submit").innerHTML=alert("Thanks for filling it up")
+}
+
+
+
+
+
+// const express = require("express");
+// const path = require("path")
+// const app = express();
+
+// require("./db/conn")
+// const port = process.env.PORT || 3000;
+
+// const static_path = path.join(__dirname,"../public");
+// app.use(express.static(static_path))
+// app.get('/',(req,res) =>{
+//     res.send("hello hii bye ")
+// })
+// app.get('/public/app.js',(req,res) =>{
+//     res.render("hello hii bye ")
+// })
+// app.post('/public/app.js',(req,res) =>{
+//     res.render("cong")
+// })
+// app.listen(port,()=>{
+//     console.log(`application is started on ${port}`)
+// })
+</script>
+</html>
